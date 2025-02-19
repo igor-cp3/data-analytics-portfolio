@@ -1,3 +1,6 @@
+![Alt text](https://github.com/igor-cp3/data-analytics-portfolio/blob/main/Cars_image.jpg)
+
+
 # data-analytics-portfolio
 Portfolio for data analytics project, including SQL code, dataset, Tableau dashboard, and analysis
 
