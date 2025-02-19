@@ -11,13 +11,6 @@ This project demonstrates my data analysis skills using a real-world dataset. Th
 2. **Data Cleaning**: Cleaned and transformed data using SQL queries in DBeaver.
 3. **Visualization**: Created a dashboard in Tableau to visualize key insights.
 
-## SQL Code:
-Below is the SQL code I used for data cleaning:
-
-```sql
--- Example SQL code
-SELECT * FROM dataset WHERE column IS NOT NULL;
-
 
 Вступ: Обов'язково вкажіть мету тематичного дослідження. Сюди входить, що таке сценарій, і пояснення того, як він пов'язаний з реальною перешкодою. Не соромтеся звертати увагу на будь-які припущення чи теорії, які ви можете мати, залежно від наданої інформації. 
 
@@ -28,3 +21,14 @@ SELECT * FROM dataset WHERE column IS NOT NULL;
 Висновок: Завершіть свою презентацію, узагальнивши ключові висновки всіх проведених вами вирішення проблем, виділивши те, що ви дізналися з цього.
 
 Наступні кроки: Виберіть найкраще рішення та запропонуйте рекомендації для клієнта чи бізнесу. Поясніть, чому ви зробили свій вибір і як це позитивно вплине на сценарій. Будьте конкретними та вкажіть, що потрібно зробити, хто повинен це виконувати та коли.
+
+
+## SQL Code:
+Below is the SQL code I used for data cleaning:
+
+```sql
+-- Example SQL code
+SELECT * FROM dataset WHERE column IS NOT NULL;
+
+
+
