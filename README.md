@@ -44,6 +44,8 @@ Below is the SQL code I used for data cleaning:
 ```sql
 -- Example SQL code
 SELECT * FROM dataset WHERE column IS NOT NULL;
+```
 
+![Alt text](https://github.com/igor-cp3/data-analytics-portfolio/blob/main/Cars_image.jpg)
 
 
