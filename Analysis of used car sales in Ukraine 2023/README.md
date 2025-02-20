@@ -15,6 +15,7 @@ Portfolio for data analytics project, including SQL code, dataset, Tableau dashb
     • data-analizing.ipynb - jupyter-ноутбук, содержащий основной код проекта, в котором демонстрируются методы использования sql
     • requirements.txt - файл с зафиксированными версиями библиотек.
 ## About data
+https://data.gov.ua/dataset
 
 ## Steps Taken
 1. **Dataset Acquisition**: Downloaded data from an open source.
