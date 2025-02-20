@@ -46,6 +46,6 @@ Below is the SQL code I used for data cleaning:
 SELECT * FROM dataset WHERE column IS NOT NULL;
 ```
 
-![Alt text](https://github.com/igor-cp3/data-analytics-portfolio/blob/main/Dashboard%201.png)
+![Alt text](https://github.com/igor-cp3/data-analytics-portfolio/blob/main/Dashboard%201%20(1).png)
 
 
