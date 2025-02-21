@@ -16,7 +16,10 @@ The main questions I wanted to get an answer to were:
 - How many cars are sold in the first year of use among the top 20 best-selling new cars in Ukraine in 2023?
 
 ## About data
-https://data.gov.ua/dataset
+The dataset contains information on vehicles and information on vehicle registration and re-registration transactions during 2023 in Ukraine. 
+Data source: Ministry of Internal Affairs of Ukraine 
+Data storage location: https://data.gov.ua/dataset
+Public Data type: Open
 
 ## Steps Taken
 1. **Dataset Acquisition**: Downloaded data from an open source.
