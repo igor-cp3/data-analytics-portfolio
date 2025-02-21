@@ -11,7 +11,9 @@ Welcome to my first portfolio project. In this data cleaning, analysis and visua
 
 
 ## Purposes of the Project
-
+The main questions I wanted to get an answer to were:
+- What brands and models of used cars are the most popular in Ukraine in 2023?
+- How many cars are sold in the first year of use among the top 20 best-selling new cars?
 
 ## About data
 https://data.gov.ua/dataset
