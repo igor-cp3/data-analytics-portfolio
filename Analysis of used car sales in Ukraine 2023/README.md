@@ -10,10 +10,7 @@ Portfolio for data analytics project, including SQL code, dataset, Tableau dashb
 
 ## Purposes of the Project
 
-## О структуре проекта:
-    • images - папка с изображениями, необходимыми для проекта
-    • data-analizing.ipynb - jupyter-ноутбук, содержащий основной код проекта, в котором демонстрируются методы использования sql
-    • requirements.txt - файл с зафиксированными версиями библиотек.
+
 ## About data
 https://data.gov.ua/dataset
 
