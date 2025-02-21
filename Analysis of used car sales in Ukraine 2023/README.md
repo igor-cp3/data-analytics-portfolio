@@ -6,7 +6,9 @@
 
 ## Project Overview
 This project demonstrates my data analysis skills using a real-world dataset. The dataset was cleaned and processed using SQL, followed by data visualizations created in Tableau.
-Portfolio for data analytics project, including SQL code, dataset, Tableau dashboard, and analysis
+Welcome to my first portfolio project. In this data cleaning, analysis and visualisation project, I clean the AdventureWorks dataset with SQL, then visualise it as an interactive 3-page dashboard with PowerBI and also export a static version of the dashboard as a PDF.
+
+
 
 ## Purposes of the Project
 
