@@ -44,7 +44,7 @@ SELECT * FROM dataset WHERE column IS NOT NULL;
 
 ![Alt text](https://github.com/igor-cp3/data-analytics-portfolio/blob/main/Analysis%20of%20used%20car%20sales%20in%20Ukraine%202023/Dashboard%20resize.png)
 
-## Conclusion
+## Conclusions
  Завершіть свою презентацію, узагальнивши ключові висновки всіх проведених вами вирішення проблем, виділивши те, що ви дізналися з цього.
 
 
