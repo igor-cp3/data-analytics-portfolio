@@ -23,12 +23,12 @@ The dataset contains information about vehicles, vehicles registration and re-re
   
 ## Steps Taken
 1. **Defining goals**
-2. **Data collection**
-3. **Familiarize yourself with the data**
+2. **Collecting data**
+3. **Looking into data**
 4. **Cleaning and preparing data with SQL queries in DBeaver**
-5. **Data analysis**
-6. **Visualization by creating a dashboard in Tableau**
-7. **Interpretation of the results**
+5. **Analyzing data**
+6. **Visualizing by creating a dashboard in Tableau**
+7. **Interpreting of the results**
 
 
 ## SQL Code
