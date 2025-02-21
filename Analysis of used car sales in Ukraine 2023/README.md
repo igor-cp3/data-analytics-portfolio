@@ -5,10 +5,7 @@
 
 
 ## Project Overview
-This project demonstrates my data analysis skills using a real-world dataset. The dataset was cleaned and processed using SQL, followed by data visualizations created in Tableau.
-Welcome to my first portfolio project. In this data cleaning, analysis and visualisation project, I clean the AdventureWorks dataset with SQL, then visualise it as an interactive 3-page dashboard with PowerBI and also export a static version of the dashboard as a PDF.
-
-
+Welcome to my first portfolio project. This project demonstrates my data analysis skills by using a real data set. This dataset contains information about vehicles and information about vehicle registration and re-registration transactions during 2023 in Ukraine. The dataset was cleaned and processed using SQL, after which a data visualization was created in Tableau, which allowed me to draw some conclusions.
 
 ## Purposes of the Project
 The main questions I wanted to get an answer to were:
