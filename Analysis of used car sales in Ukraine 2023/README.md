@@ -17,7 +17,9 @@ The dataset contains information on vehicles and information on vehicle registra
 - Data source: Ministry of Internal Affairs of Ukraine 
 - Data storage location: https://data.gov.ua/dataset
 - Data type: Public 
+- The data contains 20 columns and 2 124 732 rows:
 
+  
 ## Steps Taken
 1. **Dataset Acquisition**: Downloaded data from an open source.
 2. **Data Cleaning**: Cleaned and transformed data using SQL queries in DBeaver.
