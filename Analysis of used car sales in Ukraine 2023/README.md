@@ -31,7 +31,7 @@ The dataset contains information about vehicles, vehicles registration and re-re
 7. **Interpretation of the results**
 
 
-## SQL Code:
+## SQL Code
 Below are the SQL queries and comments to them that I used when working with the dataset
 
 ```sql
@@ -197,6 +197,8 @@ FROM tz_opendata_z01012023_po01012024 tozp
 RIGHT JOIN tz_opendata_reg ON tozp.DEP=tz_opendata_reg.DEP
 WHERE (OPER_CODE IN (315, 308, 100, 70, 71, 319, 329, 313, 310, 314, 331) OR OPER_CODE IS NULL) AND (KIND LIKE 'ЛЕГКОВИЙ' OR KIND IS NULL)
 ```
+
+## Visualization
 
 ![Alt text](https://github.com/igor-cp3/data-analytics-portfolio/blob/main/Analysis%20of%20used%20car%20sales%20in%20Ukraine%202023/Dashboard%20resize.png)
 
