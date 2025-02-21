@@ -18,7 +18,7 @@ The dataset contains information on vehicles and information on vehicle registra
 - Data storage location: https://data.gov.ua/dataset
 - Data type: Public 
 - The data contains 20 columns and 2 124 732 rows:
-![Alt text](https://github.com/igor-cp3/data-analytics-portfolio/blob/main/Analysis%20of%20used%20car%20sales%20in%20Ukraine%202023/Cars_image.jpg)
+![Alt text](https://github.com/igor-cp3/data-analytics-portfolio/blob/main/Analysis%20of%20used%20car%20sales%20in%20Ukraine%202023/Data_scheme.png)
   
 ## Steps Taken
 1. **Dataset Acquisition**: Downloaded data from an open source.
