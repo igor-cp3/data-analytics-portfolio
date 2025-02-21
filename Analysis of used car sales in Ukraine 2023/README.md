@@ -202,6 +202,10 @@ WHERE (OPER_CODE IN (315, 308, 100, 70, 71, 319, 329, 313, 310, 314, 331) OR OPE
 
 ![Alt text](https://github.com/igor-cp3/data-analytics-portfolio/blob/main/Analysis%20of%20used%20car%20sales%20in%20Ukraine%202023/Dashboard%20resize.png)
 
+
+Better quality
+https://public.tableau.com/app/profile/igor.lavrentiev/viz/UsedcarssalesUkrainedashboard/Dashboard1
+
 ## Conclusions
  Завершіть свою презентацію, узагальнивши ключові висновки всіх проведених вами вирішення проблем, виділивши те, що ви дізналися з цього.
 
