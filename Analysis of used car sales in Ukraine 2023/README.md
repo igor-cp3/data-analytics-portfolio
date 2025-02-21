@@ -19,7 +19,7 @@ The main questions I wanted to get an answer to were:
 The dataset contains information on vehicles and information on vehicle registration and re-registration transactions during 2023 in Ukraine. 
 - Data source: Ministry of Internal Affairs of Ukraine 
 - Data storage location: https://data.gov.ua/dataset
-- Public Data type: Open
+- Data type: Public 
 
 ## Steps Taken
 1. **Dataset Acquisition**: Downloaded data from an open source.
