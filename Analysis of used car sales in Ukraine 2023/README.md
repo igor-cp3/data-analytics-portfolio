@@ -22,9 +22,13 @@ The dataset contains information about vehicles, vehicles registration and re-re
 ![Alt text](https://github.com/igor-cp3/data-analytics-portfolio/blob/main/Analysis%20of%20used%20car%20sales%20in%20Ukraine%202023/Data_scheme.png)
   
 ## Steps Taken
-1. **Dataset Acquisition**: Downloaded data from an open source.
-2. **Data Cleaning**: Cleaned and transformed data using SQL queries in DBeaver.
-3. **Visualization**: Created a dashboard in Tableau to visualize key insights.
+1. **Defining goals**
+2. **Data collection**
+3. **Familiarize yourself with the data**
+4. **Cleaning and preparing data with SQL queries in DBeaver**
+5. **Data analysis**
+6. **Visualization by creating a dashboard in Tableau**
+7. **Interpretation of the results**
 
 
 ## SQL Code:
