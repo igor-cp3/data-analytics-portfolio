@@ -40,7 +40,8 @@ Below are the SQL queries and comments to them that I used when working with the
 
 ```sql
 #Перевірка чи немає пропущених комірок
-SELECT count(*), count(OPER_NAME), count(OPER_CODE), count(D_REG), count(DEP), count(BRAND), count(MODEL), count(MAKE_YEAR), count(BODY), count(KIND), count(VIN)
+SELECT count(*), count(OPER_NAME), count(OPER_CODE), count(D_REG), count(DEP), count(BRAND),
+count(MODEL), count(MAKE_YEAR), count(BODY), count(KIND), count(VIN)
 FROM tz_opendata_z01012023_po01012024 tozp 
 
 #Аналізування датасету. Первірка варіацій моделей, хоча кузов один і той самий, або різні виробничі площі
