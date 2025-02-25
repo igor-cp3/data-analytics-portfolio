@@ -207,7 +207,14 @@ Better quality
 https://public.tableau.com/app/profile/igor.lavrentiev/viz/UsedcarssalesUkrainedashboard/Dashboard1
 
 ## Conclusions
- Завершіть свою презентацію, узагальнивши ключові висновки всіх проведених вами вирішення проблем, виділивши те, що ви дізналися з цього.
+Based on the analysis of the dataset, I have made certain conclusions:
+- The leaders of used car sales in Ukraine in 2023 are representatives of the German automobile concern VAG. Among the top 15 best-selling cars, the first three are VAG cars, and 6 models out of 15 also belong to the VAG group.
+The presence of the VAZ brand in the top 15 best selling cars (5th position) indicates a rather low solvency of the population, which buys rather old and cheap cars. 
+- If we look at each model separately and determine the year of manufacture of the model that was most often bought in 2023, we see that these are quite old cars manufactured from 2006 to 2013. This fact also tells us about certain financial capabilities and purchasing power of the population.
+- Looking at the car models with the highest sales in each region of Ukraine, we can see a certain trend. In Kharkiv, Donetsk, Zaporizhzhia, Kherson and Dnipro regions, the best-selling car is ZAZ-DEAWOO Lanos. This is a fairly budgetary and old car. One of the hypotheses is that the reason for this phenomenon is the hostilities and the direct front line that passed through these regions in 2023. In fact, Dnipropetrovska oblast is surrounded by these regions where hostilities are taking place on 3 sides. These circumstances directly affect the availability of solvent population and the value and purpose of the respective car model.
+- The latest visualization provides information on the top 20 new models that were most often bought by Ukrainians in 2023. As well as the percentage of sales of these models in the same year 2023. The visualization shows certain emissions that stand out against the background of other indicators. Three car models have a significant percentage of sales in the same year. These are Volkswagen ID.4 - 13%, Toyota Land Cruiser - 12%, and BMW X5 - 18%. These indicators indicate a certain dissatisfaction of owners with their cars that they bought new.
+In general, this analysis can be used by importers of spare parts and car maintenance services to formulate a spare parts procurement policy.
+
 
 
 
