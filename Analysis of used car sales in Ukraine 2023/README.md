@@ -185,14 +185,15 @@ FROM tz_opendata_z01012023_po01012024 tozp
 RIGHT JOIN tz_opendata_reg ON tozp.DEP=tz_opendata_reg.DEP
 WHERE OPER_CODE IN (99, 105, 69, 72) AND KIND LIKE 'ЛЕГКОВИЙ' AND MAKE_YEAR IN (2022, 2023)
 
-#Вибрали бу авто (коди операцій), що були перерєстровані протягом 2023 року, у яких VIN код співпадає з VIN кодом машин, куплених вперше в 2023 році
- - second cars sales 2023 
+#Вибрали бу авто (коди операцій), що були перерєстровані протягом 2023 року, у яких VIN код співпадає з VIN кодом машин,
+куплених вперше в 2023 році - second cars sales 2023 
 SELECT BRAND, MODEL, MAKE_YEAR, VIN
 FROM tz_opendata_z01012023_po01012024 tozp 
 WHERE OPER_CODE IN (315, 308, 100, 70, 71, 319,329, 313, 310, 314, 331) AND VIN IN (
                                         SELECT VIN
                                         FROM tz_opendata_z01012023_po01012024 tozp 
-                                        WHERE OPER_CODE IN (99, 105, 69, 72) AND KIND LIKE 'ЛЕГКОВИЙ' AND MAKE_YEAR IN (2022, 2023))
+                                        WHERE OPER_CODE IN (99, 105, 69, 72) AND KIND LIKE 'ЛЕГКОВИЙ'
+                                        AND MAKE_YEAR IN (2022, 2023))
 
 
 
@@ -200,7 +201,8 @@ WHERE OPER_CODE IN (315, 308, 100, 70, 71, 319,329, 313, 310, 314, 331) AND VIN 
 SELECT OPER_NAME, COALESCE(OPER_CODE, 0), D_REG, BRAND, MODEL, MAKE_YEAR, KIND, VIN, tz_opendata_reg.REG
 FROM tz_opendata_z01012023_po01012024 tozp 
 RIGHT JOIN tz_opendata_reg ON tozp.DEP=tz_opendata_reg.DEP
-WHERE (OPER_CODE IN (315, 308, 100, 70, 71, 319, 329, 313, 310, 314, 331) OR OPER_CODE IS NULL) AND (KIND LIKE 'ЛЕГКОВИЙ' OR KIND IS NULL)
+WHERE (OPER_CODE IN (315, 308, 100, 70, 71, 319, 329, 313, 310, 314, 331) OR OPER_CODE IS NULL)
+AND (KIND LIKE 'ЛЕГКОВИЙ' OR KIND IS NULL)
 ```
 
 ## Visualization
