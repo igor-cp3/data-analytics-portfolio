@@ -5,7 +5,9 @@
 
 
 ## Project Overview
-Welcome to my first portfolio project. This project demonstrates my data analysis skills using a real dataset. This dataset contains information about vehicles, vehicles registration and re-registration transactions during 2023 in Ukraine. The dataset was cleaned and processed using SQL, after which a data visualization was created in Tableau, which allowed me to make some conclusions.
+Welcome to my first portfolio project. This project demonstrates my data analysis skills on a real dataset. 
+The applied dataset contains information about vehicles, vehicle registration and re-registration transactions during 2023 in Ukraine.  While in automotive publications we often see statistics on new car sales, we do not see statistics on used car sales. It was this information that I was interested in researching and analyzing.
+The dataset was cleaned and processed using SQL, after which a data visualization was created in Tableau, which allowed me to draw some conclusions.
 
 ## Purposes of the Project
 The main questions I wanted to get an answer to were:
