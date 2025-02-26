@@ -168,7 +168,7 @@ SET MODEL =
 WHERE BRAND LIKE 'TOYOTA';
 ```
 
-I checked whether the changes to the dataset worked correctly using the example of models: LANOS, RAV4 and ID.4.
+- I checked whether the changes to the dataset worked correctly using the example of models: LANOS, RAV4 and ID.4.
 ```sql
 SELECT BRAND, MODEL, COUNT(VIN) as COUNT_VIN
 FROM tz_opendata_z01012023_po01012024 tozp 
@@ -177,12 +177,13 @@ GROUP BY BRAND, MODEL
 ORDER BY 3 desc;
 ```
 
-#Аналізування операційних кодів
-SELECT OPER_NAME, OPER_CODE, count(OPER_CODE) AS COUNT_CODE
+#At this stage, I analyzed the timing of car transactions that could be possible in principle. There are 106 types of car transactions in this dataset, but not all of them interest me. I am only interested in those transactions and their codes that indicate the purchase of a used car.
+```sql
+OPER_NAME, OPER_CODE, count(OPER_CODE) AS COUNT_CODE
 FROM tz_opendata_z01012023_po01012024 tozp 
 GROUP BY OPER_CODE, OPER_NAME
 ORDER BY 3 desc;
-
+```
 
 #Створив таблицю tz_opendata_reg де в ручну для кожного департамента визначив регіон англійською мовою.
 
