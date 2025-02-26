@@ -149,7 +149,7 @@ SET BRAND =
     END
 WHERE MODEL LIKE 'LANOS';
 
-#Toyota. Different configurations and engines of the same model
+#Toyota Different configurations and engines of the same model
 UPDATE tz_opendata_z01012023_po01012024 
 SET MODEL = 
     CASE 
