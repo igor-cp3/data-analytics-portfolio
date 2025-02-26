@@ -168,12 +168,14 @@ SET MODEL =
 WHERE BRAND LIKE 'TOYOTA';
 ```
 
-#Перевірка
-SELECT BRAND, MODEL, COUNT(VIN) as COUNT_BRAND
+I checked whether the changes to the dataset worked correctly using the example of models: LANOS, RAV4 and ID.4.
+```sql
+SELECT BRAND, MODEL, COUNT(VIN) as COUNT_VIN
 FROM tz_opendata_z01012023_po01012024 tozp 
 WHERE MODEL LIKE 'LANOS' or MODEL LIKE 'RAV%' or MODEL LIKE 'ID.4%'
 GROUP BY BRAND, MODEL
-ORDER BY 2 desc;
+ORDER BY 3 desc;
+```
 
 #Аналізування операційних кодів
 SELECT OPER_NAME, OPER_CODE, count(OPER_CODE) AS COUNT_CODE
@@ -211,6 +213,7 @@ WHERE OPER_CODE IN (315, 308, 100, 70, 71, 319,329, 313, 310, 314, 331) AND VIN 
 
 
 #Вибір кодів операцій які свідчать про купівлю авто (б/у) - used cars sales
+```sql
 SELECT OPER_NAME, COALESCE(OPER_CODE, 0), D_REG, BRAND, MODEL, MAKE_YEAR, KIND, VIN, tz_opendata_reg.REG
 FROM tz_opendata_z01012023_po01012024 tozp 
 RIGHT JOIN tz_opendata_reg ON tozp.DEP=tz_opendata_reg.DEP
