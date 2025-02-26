@@ -56,6 +56,10 @@ FROM tz_opendata_z01012023_po01012024 tozp;
 - Next, I familiarized myself with the brands and models of cars and the number of VIN codes of each model in the dataset.
 
 ```sql
+SELECT BRAND, MODEL, COUNT(VIN) as COUNT_VIN
+FROM tz_opendata_z01012023_po01012024 tozp 
+GROUP BY BRAND, MODEL
+ORDER BY 3 desc;
 ```
 
 - There is a nuance here: we have different model names in the dataset, although in fact it is one car model. For example: BMW 525 and BMW 520D, the model is the same - BMW 5, but the engines are different. The situation is similar with Toyota RAV4 and RAV-4 HYBRID. The model is the same, but the engines are different. Or as in the case of Volkswagen ID.4 PRO and PRO S - different configurations. Therefore, to understand people's interest in a particular model, I made changes to the dataset and unified the most popular models.
