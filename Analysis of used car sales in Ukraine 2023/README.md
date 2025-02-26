@@ -36,8 +36,6 @@ The dataset contains information about vehicles, vehicles registration and re-re
 
 
 ## SQL Code
-Below are the SQL queries and comments to them that I used when working with the dataset
-
 
 First, I check if there are any missing cells in the dataset among the columns we are interested in
 
@@ -46,8 +44,7 @@ SELECT count(*), count(OPER_NAME), count(OPER_CODE), count(D_REG), count(DEP), c
 count(MODEL), count(MAKE_YEAR), count(BODY), count(KIND), count(VIN)
 FROM tz_opendata_z01012023_po01012024 tozp;
 ```
-Next, I familiarized myself with the brands and models of cars and the number of VIN codes of each model in the dataset.
-There is a nuance here: we have different model names in the dataset, although in fact it is one car model. For example: BMW 525 and BMW 520D, the model is the same - BMW 5, but the engines are different. The situation is similar with Toyota RAV4 and RAV-4 HYBRID. The model is the same, but the engines are different. Or as in the case of Volkswagen ID.4 PRO and PRO S - different configurations. Therefore, to understand people's interest in a particular model, I made changes to the dataset and unified the most popular models.#
+Next, I familiarized myself with the brands and models of cars and the number of VIN codes of each model in the dataset. There is a nuance here: we have different model names in the dataset, although in fact it is one car model. For example: BMW 525 and BMW 520D, the model is the same - BMW 5, but the engines are different. The situation is similar with Toyota RAV4 and RAV-4 HYBRID. The model is the same, but the engines are different. Or as in the case of Volkswagen ID.4 PRO and PRO S - different configurations. Therefore, to understand people's interest in a particular model, I made changes to the dataset and unified the most popular models.
 
 ```sql
 #RAV4 Different engines of the same model
