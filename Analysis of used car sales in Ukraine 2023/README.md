@@ -137,7 +137,6 @@ SET MODEL =
 WHERE BRAND LIKE 'BMW';
 
 #Lanos Different manufacturers of the same model
-
 UPDATE tz_opendata_z01012023_po01012024 
 SET BRAND = 
     CASE 
