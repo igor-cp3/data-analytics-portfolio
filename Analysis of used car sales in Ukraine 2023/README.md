@@ -39,31 +39,14 @@ The dataset contains information about vehicles, vehicles registration and re-re
 Below are the SQL queries and comments to them that I used when working with the dataset
 
 ```sql
-#Перевірка чи немає пропущених комірок
+#First, I check if there are any missing cells in the dataset among the columns we are interested in
 SELECT count(*), count(OPER_NAME), count(OPER_CODE), count(D_REG), count(DEP), count(BRAND),
 count(MODEL), count(MAKE_YEAR), count(BODY), count(KIND), count(VIN)
-FROM tz_opendata_z01012023_po01012024 tozp 
+FROM tz_opendata_z01012023_po01012024 tozp;
 
-#Аналізування датасету. Первірка варіацій моделей, хоча кузов один і той самий, або різні виробничі площі
-SELECT BRAND, MODEL, COUNT(VIN) as COUNT_BRAND
-FROM tz_opendata_z01012023_po01012024 tozp 
-WHERE MODEL LIKE 'LANOS' or MODEL LIKE 'RAV%' or MODEL LIKE 'ID.4%'
-GROUP BY BRAND, MODEL
-ORDER BY 2 desc;
+#Next, I familiarized myself with the brands and models of cars and the number of VIN codes of each model in the dataset. There is a nuance here: we have different model names in the dataset, although in fact it is one car model. For example: BMW 525 and BMW 520D, the model is the same - BMW 5, but the engines are different. The situation is similar with Toyota RAV4 and RAV-4 HYBRID. The model is the same, but the engines are different. Or as in the case of Volkswagen ID.4 PRO and PRO S - different configurations. Therefore, to understand people's interest in a particular model, I made changes to the dataset and unified the most popular models.
 
-#LANOS Різні виробники, модель одна й та сама, проводимо уніфікацію
-UPDATE tz_opendata_z01012023_po01012024 
-SET BRAND = 
-    CASE 
-        WHEN BRAND = 'DAEWOO' THEN 'ЗАЗ-DAEWOO'
-        WHEN BRAND = 'ЗАЗ' THEN 'ЗАЗ-DAEWOO'
-        WHEN BRAND = 'CHEVROLET' THEN 'ЗАЗ-DAEWOO'
-        WHEN BRAND = 'FSO' THEN 'ЗАЗ-DAEWOO'
-        ELSE BRAND
-    END
-WHERE MODEL LIKE 'LANOS';
-
-#RAV4 Різні варіації одного кузова
+#RAV4 Different engines of the same model
 UPDATE tz_opendata_z01012023_po01012024 
 SET MODEL = 
     CASE 
@@ -73,7 +56,7 @@ SET MODEL =
     END
 WHERE BRAND LIKE 'TOYOTA';
 
-#ID.4 різні комплектації одного кузова
+#ID.4 Different configurations and manufacturers of the same model
 UPDATE tz_opendata_z01012023_po01012024 
 SET MODEL = 
     CASE 
@@ -88,8 +71,7 @@ SET MODEL =
     END
 WHERE BRAND LIKE 'VOLKSWAGEN';
 
-
-#BMW Уніфікація моделі 3 та 5, різні двигуни
+#BMW Different engines of the same model
 UPDATE tz_opendata_z01012023_po01012024 
 SET MODEL = 
     CASE 
@@ -135,7 +117,20 @@ SET MODEL =
     END
 WHERE BRAND LIKE 'BMW';
 
-#Toyota. Уніфікація моделей
+#Lanos Different manufacturers of the same model
+
+UPDATE tz_opendata_z01012023_po01012024 
+SET BRAND = 
+    CASE 
+        WHEN BRAND = 'DAEWOO' THEN 'ЗАЗ-DAEWOO'
+        WHEN BRAND = 'ЗАЗ' THEN 'ЗАЗ-DAEWOO'
+        WHEN BRAND = 'CHEVROLET' THEN 'ЗАЗ-DAEWOO'
+        WHEN BRAND = 'FSO' THEN 'ЗАЗ-DAEWOO'
+        ELSE BRAND
+    END
+WHERE MODEL LIKE 'LANOS';
+
+#Toyota. Different configurations and engines of the same model
 UPDATE tz_opendata_z01012023_po01012024 
 SET MODEL = 
     CASE 
@@ -153,7 +148,6 @@ SET MODEL =
         ELSE MODEL
     END
 WHERE BRAND LIKE 'TOYOTA';
-
 
 
 #Перевірка
