@@ -39,7 +39,7 @@ The dataset contains information about vehicles, vehicles registration and re-re
 
 I performed all data transformations in DBeaver using the PostgreSQL relational database management system.
 
-- First, I check if there are any missing cells in the dataset among the columns we are interested in.
+- First, I loaded the dataset - tz_opendata_z01012023_po01012024 into DBeaver and checked if there were any missing cells in the dataset among the columns of interest.
 
 ```sql
 SELECT count(*),
