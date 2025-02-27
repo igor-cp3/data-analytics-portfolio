@@ -188,7 +188,7 @@ ORDER BY 3 desc;
 ```
 
 - I chose the transaction codes that indicate the purchase of a used car.
-- 
+
 Also, in order to create a map of Ukraine in Tableu, I created a file tz_opendata_reg (this file is available for download). In this file, I registered all the Departments of Car Registration of Ukraine - 'DEP', and for each department I indicated the region of Ukraine where it is located - 'REG'.
 
 After that, I loaded the tz_opendata_reg file into DBeaver and did a JOIN of the main file and this file. I did this in order to see the region where the registration took place.
