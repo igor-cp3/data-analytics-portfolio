@@ -192,7 +192,7 @@ After that, I loaded the tz_opendata_reg file into DBeaver and did a JOIN of the
 
 ```sql
 #Selection of transaction codes indicating the purchase of a used car 
-SELECT OPER_NAME, OPER_CODE, D_REG, BRAND, MODEL, MAKE_YEAR, KIND, VIN, tz_opendata_reg.REG as REG
+SELECT tozp.OPER_NAME, tozp.OPER_CODE, tozp.D_REG, tozp.BRAND, tozp.MODEL, tozp.MAKE_YEAR, tozp.KIND, tozp.VIN, tz.REG as REG
 FROM tz_opendata_z01012023_po01012024 tozp 
 RIGHT JOIN tz_opendata_reg tz ON tozp.DEP=tz.DEP
 WHERE OPER_CODE IN (315, 308, 100, 70, 71, 319, 329, 313, 310, 314, 331)
