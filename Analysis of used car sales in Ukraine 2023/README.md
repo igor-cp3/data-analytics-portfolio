@@ -37,7 +37,7 @@ The dataset contains information about vehicles, vehicles registration and re-re
 
 ## SQL Code
 
-- First, I check if there are any missing cells in the dataset among the columns we are interested in
+- First, I check if there are any missing cells in the dataset among the columns we are interested in.
 
 ```sql
 SELECT count(*),
@@ -177,7 +177,7 @@ GROUP BY BRAND, MODEL
 ORDER BY 3 desc;
 ```
 
-- At this stage, I analyzed the timing of car transactions that could be possible in principle. There are 106 types of car transactions in this dataset, but not all of them interest me. I am only interested in those transactions and their codes that indicate the purchase of a used car.
+- At this stage, I analyzed the types of car transactions that could be possible in principle. There are 106 types of car transactions in this dataset, but I am not interested in all of them. I am only interested in those transactions and their codes that indicate the purchase of a used car.
 ```sql
 OPER_NAME, OPER_CODE, count(OPER_CODE) AS COUNT_CODE
 FROM tz_opendata_z01012023_po01012024 tozp 
