@@ -189,9 +189,11 @@ ORDER BY 3 desc;
 
 - I chose the transaction codes that indicate the purchase of a used car.
 
-Also, to display the map of Ukraine in Tableu, I created a file 'tz_opendata_reg' (this file can be downloaded). In this file, I registered all the codes of the car registration departments of Ukraine - 'DEP', and for each department I indicated the region of Ukraine in which it is located - 'REG'.
+Also, to display the map of Ukraine in Tableau, I created a file 'tz_opendata_reg' (this file can be downloaded). In this file, I registered all the codes of the car registration departments of Ukraine - 'DEP', and for each department I indicated the region of Ukraine in which it is located - 'REG'.
 
-After that, I loaded the 'tz_opendata_reg' file into DBeaver and did a JOIN with the main file. I did this in order to see the region where the registration took place.
+After that, I loaded the 'tz_opendata_reg' file into DBeaver and did a JOIN with the main file. I did this in order to see the region where the registration took place. 
+
+I saved the table I got as a result of these manipulations as a CSV file for further work with it in Tableau
 
 ```sql
 #Selection of transaction codes indicating the purchase of a used car 
