@@ -185,8 +185,19 @@ GROUP BY OPER_CODE, OPER_NAME
 ORDER BY 3 desc;
 ```
 
-#Створив таблицю tz_opendata_reg де в ручну для кожного департамента визначив регіон англійською мовою.
+-I chose the transaction codes that indicate the purchase of a used car. 
+Also, in order to create a map of Ukraine in Tableu, I created a file tz_opendata_reg (this file is available for download). In this file, I registered all the Departments of Car Registration of Ukraine - 'DEP', and for each department I indicated the region of Ukraine where it is located - 'REG'. 
+After that, I loaded the tz_opendata_reg file into DBeaver and did a JOIN of the main file and this file. I did this in order to see the region where the registration took place.
 
+
+```sql
+#Selection of transaction codes indicating the purchase of a used car 
+SELECT OPER_NAME, OPER_CODE, D_REG, BRAND, MODEL, MAKE_YEAR, KIND, VIN, tz_opendata_reg.REG as REG
+FROM tz_opendata_z01012023_po01012024 tozp 
+RIGHT JOIN tz_opendata_reg tz ON tozp.DEP=tz.DEP
+WHERE OPER_CODE IN (315, 308, 100, 70, 71, 319, 329, 313, 310, 314, 331)
+AND KIND LIKE 'ЛЕГКОВИЙ'
+```
 
 #Вибір кодів операцій які свідчать саме про купівлю авто (б/у чи нового)
 SELECT OPER_NAME, OPER_CODE, D_REG, BRAND, MODEL, MAKE_YEAR, KIND, VIN, tz_opendata_reg.REG
@@ -212,15 +223,6 @@ WHERE OPER_CODE IN (315, 308, 100, 70, 71, 319,329, 313, 310, 314, 331) AND VIN 
                                         AND MAKE_YEAR IN (2022, 2023))
 
 
-
-#Вибір кодів операцій які свідчать про купівлю авто (б/у) - used cars sales
-```sql
-SELECT OPER_NAME, COALESCE(OPER_CODE, 0), D_REG, BRAND, MODEL, MAKE_YEAR, KIND, VIN, tz_opendata_reg.REG
-FROM tz_opendata_z01012023_po01012024 tozp 
-RIGHT JOIN tz_opendata_reg ON tozp.DEP=tz_opendata_reg.DEP
-WHERE (OPER_CODE IN (315, 308, 100, 70, 71, 319, 329, 313, 310, 314, 331) OR OPER_CODE IS NULL)
-AND (KIND LIKE 'ЛЕГКОВИЙ' OR KIND IS NULL)
-```
 
 ## Visualization
 
