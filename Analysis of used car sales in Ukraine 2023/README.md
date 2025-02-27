@@ -203,11 +203,10 @@ RIGHT JOIN tz_opendata_reg tz ON tozp.DEP=tz.DEP
 WHERE OPER_CODE IN (315, 308, 100, 70, 71, 319, 329, 313, 310, 314, 331)
 AND KIND LIKE 'ЛЕГКОВИЙ'
 ```
-- 
+- But I still didn't have enough data to build the last visualization, where you can see the % of cars that were bought new and sold in the same year. To do this, I wrote a query to display only those car VIN codes that are present both among the cars that have registration codes as a new car and among those cars that have registration codes as a used car. That is, I have selected the transaction codes (used cars) that were re-registered during 2023, and whose VIN code matches the VIN code of cars purchased for the first time in 2023 (new cars) and whose production date is 2022 and 2023.
 
 ```sql
-#Вибрали бу авто (коди операцій), що були перерєстровані протягом 2023 року, у яких VIN код співпадає з VIN кодом машин,
-куплених вперше в 2023 році - second cars sales 2023 
+#Selection of VIN codes of new cars that were bought and sold in 2023
 SELECT BRAND, MODEL, MAKE_YEAR, VIN
 FROM tz_opendata_z01012023_po01012024 tozp 
 WHERE OPER_CODE IN (315, 308, 100, 70, 71, 319,329, 313, 310, 314, 331) AND VIN IN (
