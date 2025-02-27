@@ -1,7 +1,7 @@
 ![Alt text](https://github.com/igor-cp3/data-analytics-portfolio/blob/main/Analysis%20of%20used%20car%20sales%20in%20Ukraine%202023/Cars_image.jpg)
 
 
-# Analyzing used car sales in Ukraine in 2023
+# Analysis of used car sales in Ukraine in 2023
 
 
 ## Project Overview
