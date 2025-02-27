@@ -39,7 +39,7 @@ The dataset contains information about vehicles, vehicles registration and re-re
 
 I performed all data transformations in DBeaver using the PostgreSQL relational database management system.
 
-- First, I loaded the dataset - tz_opendata_z01012023_po01012024 into DBeaver and checked if there were any missing cells in the dataset among the columns of interest.
+- First, I loaded the dataset 'tz_opendata_z01012023_po01012024' into DBeaver and checked if there were any missing cells in the dataset among the columns of interest.
 
 ```sql
 SELECT count(*),
@@ -189,10 +189,9 @@ ORDER BY 3 desc;
 
 - I chose the transaction codes that indicate the purchase of a used car.
 
-Also, in order to create a map of Ukraine in Tableu, I created a file tz_opendata_reg (this file is available for download). In this file, I registered all the Departments of Car Registration of Ukraine - 'DEP', and for each department I indicated the region of Ukraine where it is located - 'REG'.
+Also, to display the map of Ukraine in Tableu, I created a file 'tz_opendata_reg' (this file can be downloaded). In this file, I registered all the codes of the car registration departments of Ukraine - 'DEP', and for each department I indicated the region of Ukraine in which it is located - 'REG'.
 
-After that, I loaded the tz_opendata_reg file into DBeaver and did a JOIN of the main file and this file. I did this in order to see the region where the registration took place.
-
+After that, I loaded the 'tz_opendata_reg' file into DBeaver and did a JOIN with the main file. I did this in order to see the region where the registration took place.
 
 ```sql
 #Selection of transaction codes indicating the purchase of a used car 
@@ -202,20 +201,9 @@ RIGHT JOIN tz_opendata_reg tz ON tozp.DEP=tz.DEP
 WHERE OPER_CODE IN (315, 308, 100, 70, 71, 319, 329, 313, 310, 314, 331)
 AND KIND LIKE 'ЛЕГКОВИЙ'
 ```
+- 
 
-#Вибір кодів операцій які свідчать саме про купівлю авто (б/у чи нового)
-SELECT OPER_NAME, OPER_CODE, D_REG, BRAND, MODEL, MAKE_YEAR, KIND, VIN, tz_opendata_reg.REG
-FROM tz_opendata_z01012023_po01012024 tozp 
-LEFT JOIN tz_opendata_reg ON tozp.DEP=tz_opendata_reg.DEP
-WHERE OPER_CODE IN (315, 308, 100, 105, 70, 71, 69, 319, 99, 329, 72, 313, 310, 314, 331) AND KIND LIKE 'ЛЕГКОВИЙ'
-
-
-#Вибір кодів операцій які свідчать саме про купівлю нового авто, виготовленого в 2022, 2023 році - new cars sales 2023
-SELECT OPER_NAME, OPER_CODE, D_REG, BRAND, MODEL, MAKE_YEAR, KIND, VIN, tz_opendata_reg.REG
-FROM tz_opendata_z01012023_po01012024 tozp 
-RIGHT JOIN tz_opendata_reg ON tozp.DEP=tz_opendata_reg.DEP
-WHERE OPER_CODE IN (99, 105, 69, 72) AND KIND LIKE 'ЛЕГКОВИЙ' AND MAKE_YEAR IN (2022, 2023)
-
+```sql
 #Вибрали бу авто (коди операцій), що були перерєстровані протягом 2023 року, у яких VIN код співпадає з VIN кодом машин,
 куплених вперше в 2023 році - second cars sales 2023 
 SELECT BRAND, MODEL, MAKE_YEAR, VIN
@@ -225,8 +213,7 @@ WHERE OPER_CODE IN (315, 308, 100, 70, 71, 319,329, 313, 310, 314, 331) AND VIN 
                                         FROM tz_opendata_z01012023_po01012024 tozp 
                                         WHERE OPER_CODE IN (99, 105, 69, 72) AND KIND LIKE 'ЛЕГКОВИЙ'
                                         AND MAKE_YEAR IN (2022, 2023))
-
-
+```
 
 ## Visualization
 
